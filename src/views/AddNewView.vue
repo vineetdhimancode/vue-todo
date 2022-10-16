@@ -1,6 +1,6 @@
 <template>
   <h1>Add new view</h1>
-  <TaskForm></TaskForm>
+  <TaskForm msg="Task saved successfully!"></TaskForm>
 </template>
 
 <script>
@@ -9,7 +9,6 @@ export default {
     components: {
         TaskForm
     }
-    
 }
 </script>
 

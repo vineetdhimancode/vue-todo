@@ -2,12 +2,10 @@
   <div class="home">
     <h1>Task list</h1>
 
-    <div v-if="!isEdit">
       <div v-for="task in tasks" :key="task.title">
         <TaskTab :completed="task.completed" :id="task.id" :title="task.title"
         @updateTask="updateT" @deleteTask="deleteT" @editTask="editT"/>
       </div>
-    </div>
     
   </div>
 </template>
@@ -42,9 +40,6 @@ export default {
       tasks = tasks.filter((task) => task.id !== id)
       tasksObj.saveTask(tasks)
       this.tasks = tasksObj.getTasks()
-    },
-    editT(id) {
-      this.isEdit = true;
     }
   },
   mounted() {

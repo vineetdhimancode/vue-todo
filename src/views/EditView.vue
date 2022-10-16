@@ -1,6 +1,5 @@
 <template>
-  Edit view {{$route.params.id}}
-  <TaskForm :id="$route.params.id"/>
+  <TaskForm :id="$route.params.id" msg="Task updated successfully!"/>
 </template>
 
 <script>
